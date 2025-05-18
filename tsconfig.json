@@ -1,0 +1,19 @@
+{
+  "extends": "@adonisjs/tsconfig/tsconfig.app.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "./",
+    "outDir": "./build",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "#models/*": ["app/models/*"],
+      "@ioc:Adonis/Lucid": ["@adonisjs/lucid"],
+      "#validators/*": ["app/Validators/*"]
+    }
+  },
+  "include": ["app", "config", "database", "start"],
+  "exclude": ["node_modules"]
+}
